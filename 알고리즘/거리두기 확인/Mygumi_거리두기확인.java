@@ -1,3 +1,8 @@
+/*
+    맨하탄거리 2까지 X의 경우 넘어가고 책상이면 Queue Add
+    Person존재시 거리두기X로 확인하고 다음 대기실로 이동
+    방문체크, BFS 시뮬레이션
+*/
 import java.util.*;
 
 class Solution {

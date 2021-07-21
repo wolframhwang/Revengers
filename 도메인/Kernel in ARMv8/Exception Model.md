@@ -49,6 +49,7 @@ Exception은 다음과 같은 상황에서 발생한다.
 ARM v8 아키텍쳐에서는 AArch64와 AArch32라는 2개의 실행 상태가 정의되어 있다.
 
 |           |    AArch64     |    AArch32     |
+
 |    특징    |    64비트 실행 환경 </br> PC(Program Counter) </br> SP(Stack Pointer) </br> ELR(Exception Link Register)     |    32비트 실행환경     |
 |  레지스터    |    64비트 크기 범용 레지스터 31개 </br> PC(Program Counter) </br> SP(Stack Pointer) </br> ELR(Exception Link Register)      |    32비트 크기 범용 레지스터 13개 </br> PC </br> SP </br> LR(Link Register)  |
 |  인스트럭션 세트  |    A64(32비트 인코딩)     |    A32(ARM v7 지원), T32(Thumb)     |

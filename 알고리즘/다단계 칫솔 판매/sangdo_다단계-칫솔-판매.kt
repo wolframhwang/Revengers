@@ -15,7 +15,6 @@ class Solution {
         var cnt = 0
         enroll.forEach{eId[it] = cnt++}
         var parent = IntArray(cnt+1)
-        var money = Array<ArrayList<Int>>(cnt){ArrayList()}
         eId["-"] = cnt
         var answer: IntArray = IntArray(cnt)
         

@@ -12,26 +12,21 @@ class Solution {
         pair['['.toInt()] = ']'
         var answer: Int = 0
         for(i in s.indices){
-            var res = true
-            var stack:Stack<Char> = Stack()
+            var res = 1
+            var stack = Stack<Char>()
+            
             for(j in s.indices) {
                 var idx = (i+j)%s.length
-                when(s[idx]) {
-                    '{', '[', '('-> stack.add(s[idx])
-                    else -> {
-                        if(stack.isEmpty()){
-                            res= false
-                        }
-                        else{
-                            if(pair[stack.pop().toInt()] != s[idx]) {
-                                res = false
-                            }
-                        }
+                res = when(s[idx]) {
+                    '{', '[', '('-> {
+                        stack.add(s[idx])
+                        1
                     }
+                    else -> if(stack.isEmpty() || pair[stack.pop().toInt()] != s[idx]) 0 else 1
                 }
-                if(!res) break
+                if(res == 0) break
             }
-            answer += if(res && stack.isEmpty()) 1 else 0
+            answer += if(stack.isEmpty()) res else 0
         }
         return answer
     }

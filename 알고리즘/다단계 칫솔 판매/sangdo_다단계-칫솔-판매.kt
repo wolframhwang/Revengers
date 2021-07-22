@@ -16,7 +16,6 @@ class Solution {
         enroll.forEach{eId[it] = cnt++}
         var parent = IntArray(cnt+1)
         var money = Array<ArrayList<Int>>(cnt){ArrayList()}
-        var inOrder = IntArray(cnt+1)
         eId["-"] = cnt
         var answer: IntArray = IntArray(cnt)
         
@@ -24,7 +23,6 @@ class Solution {
             eId[enroll[i]] = i
             var id = i
             var recommand = eId[referral[i]]!!
-            inOrder[recommand]++
             parent[id] = recommand
         }
         for(i in amount.indices) {

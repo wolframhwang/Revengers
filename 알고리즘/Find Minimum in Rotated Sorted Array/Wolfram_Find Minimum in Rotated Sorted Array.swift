@@ -1,6 +1,5 @@
 class Solution {
     func findMin(_ nums: [Int]) -> Int {
-        var cnt : [Int] = nums
         var left = 0
         var right = nums.count - 1
         while nums[left] > nums[right] {

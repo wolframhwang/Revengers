@@ -7,7 +7,7 @@ int gcd(int a, int b){
     }
     return a;
 }
-long long solution(int w,int h) {//가로 + 세로 - 최대공약수를 하면 나온다는데 머선짓을 해도 안풀려서 답봤다 응애
+long long solution(int w,int h) {//가로 * 세로 - (가로+세로-최대공약수) 를 하면 나온다는데 머선짓을 해도 안풀려서 답봤다 응애
     long long w_long = w;
     long long h_long = h;
     long long answer = 1;

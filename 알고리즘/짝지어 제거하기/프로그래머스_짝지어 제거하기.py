@@ -10,7 +10,8 @@ stack에 넣었다가 하나씩 빼면서 같으면 pop
 """
 def solution(s):
     stack = []
-    # for i in s: -> 하면 wrong answer 
+    # for i in s: -> 하면 wrong answer
+    # TypeError: string indices must be integers
     for i in range(len(s)):
         # stack 이 비어있다면 push()
         if not stack:

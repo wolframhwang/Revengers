@@ -12,7 +12,7 @@ func solution(_ s:String) -> Int{
             stk.append(c)
         }else{
             if stk.last == c {
-                stk.removeLast()
+                stk.popLast()
             }else{
                 stk.append(c)
             }

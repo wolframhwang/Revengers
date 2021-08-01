@@ -1,3 +1,5 @@
+//스킬트리는 중복되지 않으며 무조건 스킬트리는 한줄로만 움직이기 때문에 링크드리스트를 구현하여 풀었습니다.
+
 class Node {
     char skillName;
     Node nextNode;

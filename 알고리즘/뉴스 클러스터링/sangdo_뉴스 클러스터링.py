@@ -1,7 +1,6 @@
 '''
 파이썬 아니면 개극혐일듯!
 '''
-
 from collections import defaultdict
 import re
 def solution(str1, str2):
@@ -21,16 +20,13 @@ def solution(str1, str2):
         res = re.match(regex, s)
         if res:
             dic2[s]+=1
-    for k in dic1.keys():
+            
+    for k in dic1.keys() | dic2.keys():
         dic3[k] = max(dic1[k], dic2[k])
         dic4[k] = min(dic2[k], dic1[k])
-    for k in dic2.keys():
-        dic3[k] = max(dic1[k], dic2[k])
-        dic4[k] = min(dic1[k], dic2[k])
     sum1,sum2  = 0,0
     
-    for k in dic3.keys():
+    for k in set(dic1.keys()) | set(dic2.keys()):
         sum1 += dic3[k]
-    for k in dic4.keys():
         sum2 += dic4[k]
     return(65536*sum2//sum1 if sum1 != 0 else 65536) 

@@ -7,7 +7,7 @@ var tgn: [Int] = []
 var target = 0
 var ans = 12
 func go(_ cnt: Int, _ val: Int) {
-    if cnt > 9 {
+    if cnt > 8 {
         return
     }
     if val == target {

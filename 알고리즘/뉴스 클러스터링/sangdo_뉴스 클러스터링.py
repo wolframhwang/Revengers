@@ -4,14 +4,11 @@
 
 from collections import defaultdict
 import re
-
 def solution(str1, str2):
     str1 = str1.lower()
     str2 = str2.lower()
     dic1 = defaultdict(int)
     dic2 = defaultdict(int)
-    dic3 = defaultdict(int)
-    dic4 = defaultdict(lambda: 0x3f3f3f3f)
     regex = re.compile('[a-z]{2}')
     for s in [str1[i:i+2] for i in range(len(str1)-1)]:
         res = regex.match(s)

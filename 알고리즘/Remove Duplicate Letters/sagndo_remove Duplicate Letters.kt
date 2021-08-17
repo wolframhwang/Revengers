@@ -47,3 +47,32 @@ class Solution {
         return sb.toString()
     }
 }
+
+/*
+요상하게 풀었었는데 아래는 스택버전
+
+class Solution {
+    fun removeDuplicateLetters(s: String): String {
+        var isIn = BooleanArray(26)
+        var lastIndex = IntArray(26)
+        s.forEachIndexed{i,v->
+            lastIndex[v-'a'] = i
+        }
+        var st = Stack<Char>()
+        for((i,c) in s.withIndex()) {
+            if (isIn[c - 'a']) continue
+            while(st.isNotEmpty() && st.peek() > c && lastIndex[st.peek()-'a'] > i) {
+                isIn[st.peek()-'a'] = false
+                st.pop()
+            }
+            st.add(c)
+            isIn[c-'a'] = true
+        }
+        var sb = StringBuilder()
+        while(st.isNotEmpty()) {
+            sb.append(st.pop())
+        }
+        return sb.reversed().toString()
+    }
+}
+*/

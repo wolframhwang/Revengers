@@ -1,21 +1,21 @@
 from collections import defaultdict
 
 def solution(N, number):
-    dic = defaultdict(lambda: 0x3f3f3f3f)
+    dic = defaultdict(lambda: 9)
     now = []
     n = N
-    for i in range(8):
+    for i in range(7):
         now.append(n)
         dic[n] = i+1
         dic[-n] = i+1
         n = n*10 + N
-        
+
     dic[0] = 0
-        
+
     while now:
         nxt = []
         keys = list(dic.keys())
-        
+
         for i in now:
             for j in keys:
                 c = dic[i] + dic[j]
@@ -34,5 +34,5 @@ def solution(N, number):
                     dic[i//j] = c
                     nxt.append(i//j)
         now = nxt
-    
-    return dic[number] if dic[number] != 0x3f3f3f3f else -1
+
+    return dic[number] if dic[number] != 9 else -1

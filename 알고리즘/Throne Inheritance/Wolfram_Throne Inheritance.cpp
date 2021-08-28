@@ -3,7 +3,7 @@
 // Node 포인터를 사용해서 원하는 영역으로 갈수있게끔 조절을해줍니다.
 // 아마도 getInheritanceOrder일때 전체 N중, 2N을 탐색하게되는데요
 // 20만정도고, 10번정도 돈다하여, 200만에 터질일은 없겠다고 확신을 했습니다.
-
+#include<iostream>
 #include<string>
 #include<vector>
 #include<unordered_map>
@@ -46,8 +46,8 @@ public:
         Node *p = map[name];
         p->death = true;
     }
-    vector<string> ans;
-    void getID(Node *name) {
+
+    void getID(Node *name, vector<string> &ans) {
         if(!name){ return ;}
         Node *sibling = name;
         for(; sibling->next; sibling = sibling->next){
@@ -56,16 +56,16 @@ public:
             if(!sibling->death)
                 ans.push_back(sibling->name);
             if(sibling->n)
-                getID(sibling->child);
+                getID(sibling->child, ans);
         }
     }
 
     vector<string> getInheritanceOrder() {
-        ans = vector<string>();
+        vector<string> ans;
         if(!map[king]->death)
             ans.push_back(king);
         if(map[king]->n)
-            getID(map[king]->child);
+            getID(map[king]->child, ans);
         return ans;
     }
 };

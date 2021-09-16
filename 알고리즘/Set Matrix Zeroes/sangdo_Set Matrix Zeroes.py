@@ -4,6 +4,8 @@ i,j에서 0이면
 나중에 (i,0) 이 0 이면 (i,0..len(matrix[i])) 를 모두 0으로만들고
 (0,j)이 0이면 (0.. len(matrix), j ) 를 모두 0으로 만드는 식으로하자.
 단, 이렇게하면 맨 왼쪽과 맨 위쪽은 0처리를 하기 힘들어지니 0열과 0행에 대해서는 따로 처리해두도록 하자
+
+O(N*M)
 '''
 class Solution:
     def setZeroes(self, matrix: List[List[int]]) -> None:

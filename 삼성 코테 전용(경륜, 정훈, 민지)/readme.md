@@ -9,5 +9,6 @@
 
 | date       | problem set                                                  |  경륜 | 민지 | 정훈|
 | ---------- | ------------------------------------------------------------ | ---- | ---- | ---- |
-| 09. 14     | [청소년 상어](https://www.acmicpc.net/problem/19236)          |  ✅    |      |      |
-| 09. 15     | [마법사 상어와 블리자드](https://www.acmicpc.net/problem/21611)       |  ✅    |      |      |
+| 09. 14     | [청소년 상어](https://www.acmicpc.net/problem/19236)          |  ✅  |      |      |
+| 09. 15     | [마법사 상어와 블리자드](https://www.acmicpc.net/problem/21611)|  ✅  |      |      |
+| 09. 21     | [마법사 상어와 비바라기](https://www.acmicpc.net/problem/21610)|      |      |      |
